@@ -7,7 +7,7 @@
 ;; Maintainer: Noah Friedman <friedman@splode.com>
 ;; Keywords: extensions
 
-;; $Id: update-dns.el,v 1.3 2000/02/11 00:51:00 friedman Exp $
+;; $Id: update-dns.el,v 1.4 2016/11/24 20:24:53 friedman Exp $
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -79,7 +79,7 @@
                           (iwidth (nth 2 fmt))
                           (prev (match-string 1))
                           (old-day (substring prev 0 (- iwidth)))
-                          (oincr (string-to-int (substring prev (- iwidth))))
+                          (oincr (string-to-number (substring prev (- iwidth))))
                           (incr (format (format "%%0%dd" iwidth)
                                         (if (string= old-day today)
                                             (1+ oincr)
